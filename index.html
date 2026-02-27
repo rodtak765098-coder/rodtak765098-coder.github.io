@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayZone | Бесплатные онлайн игры</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #3b82f6; --hover: #2563eb; }
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background-color: var(--card); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--accent); text-decoration: none; letter-spacing: 1px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { font-size: 28px; margin-bottom: 30px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        
+        /* Сетка игр */
+        .games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
+        .game-card { background-color: var(--card); border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+        .game-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .game-img { width: 100%; height: 160px; object-fit: cover; background-color: #334155; }
+        .game-info { padding: 15px; }
+        .game-title { margin: 0 0 10px 0; font-size: 18px; }
+        .game-category { font-size: 13px; color: #94a3b8; background: #334155; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">PlayZone</a>
+        <div class="nav-links">
+            <a href="#">Новинки</a>
+            <a href="#">Популярное</a>
+            <a href="#">Аркады</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Новые игры</h2>
+        
+        <div class="games-grid" id="games-container">
+            <!-- Игра 1 -->
+            <a href="game1.html" class="game-card">
+                <div class="game-img" style="background: linear-gradient(45deg, #ef4444, #f97316);"></div>
+                <div class="game-info">
+                    <h3 class="game-title">Cube Dash</h3>
+                    <span class="game-category">Аркада</span>
+                </div>
+            </a>
+
+            <!-- Игра 2 -->
+            <a href="game2.html" class="game-card">
+                <div class="game-img" style="background: linear-gradient(45deg, #10b981, #3b82f6);"></div>
+                <div class="game-info">
+                    <h3 class="game-title">Space Shooter</h3>
+                    <span class="game-category">Экшен</span>
+                </div>
+            </a>
+            
+             <!-- Игра 3 -->
+             <a href="game3.html" class="game-card">
+                <div class="game-img" style="background: linear-gradient(45deg, #8b5cf6, #d946ef);"></div>
+                <div class="game-info">
+                    <h3 class="game-title">Block Puzzle</h3>
+                    <span class="game-category">Головоломка</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
